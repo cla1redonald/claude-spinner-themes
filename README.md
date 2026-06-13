@@ -36,7 +36,7 @@ only ever changes that one setting.
 | 🦄 **scottish-words** | Real dictionary Scottish words for thinking and faffing — *Swithering, Jalousin', Dwammin', Dreich, Howkin'* |
 | 🏰 **fife** | Fife & Dunfermline patter and heritage — *Slaisterin', Bunkerin', Carnegie-ing, Up-the-Pars* |
 | ⚽ **scottish-football** | Legends and the modern lot — *Gemmilling, McCoisting, Fergie-ing, McTominaying, Ya beauty* |
-| 🎶 **scottish-culture** | Songs, films, food, sayings, landmarks — *Walkin'-500-Miles, Deep-frying, Painting-the-Forth-Bridge* |
+| 🏰 **scottish-culture** | Songs, films, food, sayings, landmarks — *Walkin'-500-Miles, Deep-frying, Painting-the-Forth-Bridge* |
 | 🎬 **famous-scots** | Comedy, telly, music — *Big-Yin-ing, Connery-ing, Still-Gaming, Rab-C-ing* |
 | 🏴󠁧󠁢󠁳󠁣󠁴󠁿 **the-full-haggis** | The lot, mixed. 160 words of glorious chaos. |
 
@@ -96,7 +96,7 @@ The words are just text, so you can dress them up with emoji — three ways:
   | Food | 🍽️ |
   | Drink | 🥃 |
   | Castles, landmarks, places | 🏰 |
-  | Dictionary Scots words | 🦄 |
+  | Dictionary Scottish words | 🦄 |
   | Famous Scots | 🎬 |
   | Sayings & anything in-between | 🏴󠁧󠁢󠁳󠁣󠁴󠁿 (the Saltire, our catch-all) |
 
@@ -139,18 +139,34 @@ or meaning was shoogly, it was left out rather than invented. The receipts are i
 
 ## Make your own
 
-A theme is just a wee JSON file:
+A theme is just a wee JSON file. Each verb is either a plain word (it inherits the
+theme's default `emoji`) or a `{ "verb", "emoji" }` pair to give that one word its
+own — which is exactly how `--emoji-match` knows a song from a fitba player:
 
 ```json
-{ "mode": "replace", "emoji": "🦄", "verbs": ["Swithering", "Havering", "Dwammin'"] }
+{
+  "mode": "replace",
+  "emoji": "🦄",
+  "verbs": ["Swithering", "Havering", { "verb": "McGinning", "emoji": "⚽" }]
+}
 ```
 
 Drop a new one in `themes/`, and it appears in `spinner-theme list`
-automatically. Want it folded into the everything-theme? Rebuild it:
+automatically. Want it folded into the everything-theme? Rebuild it — this tags
+each word with its source theme's emoji so `--emoji-match` keeps working (and note
+it lists the source themes, not `themes/*.json`, so the-full-haggis isn't folded
+into itself):
 
 ```sh
-jq -s '{mode:"replace", emoji:"🦄", verbs:(map(.verbs)|add|unique)}' \
-  themes/*.json > themes/the-full-haggis.json
+# Source order matters: when a word lives in two themes, the FIRST file wins its
+# emoji (e.g. Carnegie-ing is in both famous-scots and fife).
+jq -s '{mode:"replace", emoji:"🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        verbs:(map(.emoji as $d | .verbs[]
+          | if type=="object" then {verb:.verb, emoji:(.emoji // $d)}
+            else {verb:., emoji:$d} end) | unique_by(.verb))}' \
+  themes/famous-scots.json themes/fife.json themes/scottish-culture.json \
+  themes/scottish-football.json themes/scottish-words.json \
+  > themes/the-full-haggis.json
 ```
 
 **Stuck for ideas?** Scottish is just *my* version — the format goes anywhere,
