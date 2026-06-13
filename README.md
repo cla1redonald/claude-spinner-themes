@@ -33,7 +33,7 @@ only ever changes that one setting.
 
 | Theme | A taste of it |
 |---|---|
-| 🦄 **scots-words** | Real dictionary Scottish words for thinking and faffing — *Swithering, Jalousin', Dwammin', Dreich, Howkin'* |
+| 🦄 **scottish-words** | Real dictionary Scottish words for thinking and faffing — *Swithering, Jalousin', Dwammin', Dreich, Howkin'* |
 | 🏰 **fife** | Fife & Dunfermline patter and heritage — *Slaisterin', Bunkerin', Carnegie-ing, Up-the-Pars* |
 | ⚽ **scottish-football** | Legends and the modern lot — *Gemmilling, McCoisting, Fergie-ing, McTominaying, Ya beauty* |
 | 🎶 **scottish-culture** | Songs, films, food, sayings, landmarks — *Walkin'-500-Miles, Deep-frying, Painting-the-Forth-Bridge* |
@@ -135,6 +135,19 @@ automatically. Want it folded into the everything-theme? Rebuild it:
 jq -s '{mode:"replace", emoji:"🦄", verbs:(map(.verbs)|add|unique)}' \
   themes/*.json > themes/the-full-haggis.json
 ```
+
+**Stuck for ideas?** Scottish is just *my* version — the format goes anywhere,
+because it's only words:
+
+- **A Geordie one** 🍺 — *Howay-ing, Gannin', Canny-ing, Wey-aye-ing…*
+- **An Aussie one** 🦘 — *Havin'-a-squiz, Chuckin'-a-sickie, She'll-be-right-ing…*
+- **Your actual job** — make the spinner talk shop:
+  - **QA** 🐛 — *Repro-ing, Flakin', Edge-casing, Regressing, Ship-it-ing…*
+  - **Marketing** 📣 — *Ideating, Circling-back, Touching-base, Going-viral…*
+  - **Data** 📊 — *Wranglin', Backfilling, Null-handling, Dashboarding…*
+
+Your town, your team, or your trade — whatever raises a smile at 5pm. Fork it and
+make it yours.
 
 ## Bonus: while you're in your settings
 
