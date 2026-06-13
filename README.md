@@ -143,6 +143,12 @@ line? It's there for the taking — `rate_limits.five_hour.used_percentage` (the
 rolling session limit) and `rate_limits.seven_day.used_percentage`. A status line
 like `~/code  Fable  ctx:34%  session:61%  7d:12%` is a couple of `jq` lines away.
 
+<p align="center">
+  <img src="assets/demo-haste-ye-back.gif" alt="Claude Code's spinner reading 'Haste-Ye-Back…'" width="620">
+</p>
+
+<p align="center"><em>🍲 <strong>Haste-Ye-Back…</strong> — "come back soon." A fine thing for your editor to say while it works.</em></p>
+
 ## Licence
 
 MIT — see [LICENSE](LICENSE). Use it, fork it, make a Geordie one. Wha's like us? 🏴󠁧󠁢󠁳󠁣󠁴󠁿
