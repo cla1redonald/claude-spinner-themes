@@ -4,8 +4,13 @@
   "verbs": [
     "Big-Yin-ing", "Connery-ing", "Shaken-Not-Stirring", "Tennanting",
     "McGregoring", "Tuckering", "Rabbie-Burnsing", "Logie-Bairding",
-    "Murray-ing", "Capaldi-ing", { "verb": "Cinnamon-ing", "emoji": "🎶" }, "Biffy-ing", "Dignity-ing",
-    "Calvin-Harrising", "Rab-C-ing", "Nesbitting", "Still-Gaming",
+    "Murray-ing",
+    { "verb": "Capaldi-ing", "emoji": "🎶" },
+    { "verb": "Cinnamon-ing", "emoji": "🎶" },
+    { "verb": "Biffy-ing", "emoji": "🎶" },
+    { "verb": "Dignity-ing", "emoji": "🎶" },
+    { "verb": "Calvin-Harrising", "emoji": "🎶" },
+    "Rab-C-ing", "Nesbitting", "Still-Gaming",
     "Jack-an'-Victoring", "Gonnae-No'-Dae-That", "Limmying", "Taggart-ing",
     "Carnegie-ing"
   ]
