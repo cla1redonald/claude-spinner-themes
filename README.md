@@ -1,108 +1,140 @@
-# claude-spinner-themes 🦄
+# claude-spinner-themes 🦄🏴󠁧󠁢󠁳󠁣󠁴󠁿
 
-Switchable **Scottish** themes for the wee word Claude Code shows while it's
-thinking. Instead of "Thinking…" you get **"Swithering…"**, **"Bicycle-kicking…"**,
-**"Walkin'-500-Miles…"** or **"Painting-the-Forth-Bridge…"** — and you can flip
-between themes with one command.
+**Teach Claude Code tae think in Scots.**
 
-> Claude Code lets you customise its spinner words via a `spinnerVerbs` setting.
-> This repo turns that into six ready-made Scottish themes plus a safe switcher.
+Awright. You ken that wee word that flickers awa while Claude Code's grafting —
+*Thinking…*, *Pondering…*, *Percolating…*? Pure dreich, so it is. This swaps it
+for something wi' a bit mair soul:
 
 ```
-  ⚽ Bicycle-kicking…        🦄 Jalousin…           🏰 Up-the-Pars…
-  🎶 Painting-the-Forth-Bridge…     🦄 Swithering…     ⚽ McTominaying…
+🏴󠁧󠁢󠁳󠁣󠁴󠁿 Swithering…        ⚽ Bicycle-kicking…        🦕 Nessie-hunting…
+🦄 Jalousin…           🏰 Up-the-Pars…           🥃 Drammin…
+🎶 Painting-the-Forth-Bridge…              🦄 Havering…
 ```
 
-*(screen recording / GIF goes here)*
+Six themes, a one-line switch atween them, and a wee unicorn (or a hale rotating
+parade o' Saltires, castles an' Nessie) on every word. Aye, it's daft. It's also
+weirdly braw watchin' yer editor have a *swither* instead o' a think.
+
+*(stick a screen recording / GIF in here)*
+
+## Whit's the script? (the honest one-liner)
+
+Claude Code lets ye set yer ain spinner words through a setting cawed
+`spinnerVerbs`. This repo is jist **a bundle o' ready-made Scottish word lists**
+an' **a wee script that swaps them in an' oot, nae bother**. Nae magic, nuthin'
+dodgy — it only ever touches that wan setting.
 
 ## The themes
 
-| Theme | Words | What's in it |
-|---|---:|---|
-| `scots-words` | 41 | Real dictionary Scots for thinking, working, faffing — `Swithering`, `Jalousin'`, `Dwammin'`, `Howkin'`, `Plowterin'`, `Dreich` |
-| `fife` | 22 | Fife & Dunfermline dialect and heritage — `Slaisterin'`, `Bunkerin'`, `Carnegie-ing`, `Up-the-Pars`, `Howkin' coal` |
-| `scottish-football` | 33 | Legends + current squad + the patter — `Bicycle-kicking`, `Gemmilling`, `McCoisting`, `Fergie-ing`, `Ya beauty` |
-| `scottish-culture` | 44 | Songs, films, places, food, sayings, landmarks — `Walkin'-500-Miles`, `Munro-bagging`, `Deep-frying`, `Painting-the-Forth-Bridge` |
-| `famous-scots` | 22 | Comedy, telly, music, screen — `Big-Yin-ing`, `Connery-ing`, `Still-Gaming`, `Rab-C-ing` |
-| `the-full-haggis` | 160 | Everything, mixed. Maximum chaos. |
+| Theme | A wee taste o' it |
+|---|---|
+| 🦄 **scots-words** | Real dictionary Scots for thinkin' an' faffin' — *Swithering, Jalousin', Dwammin', Dreich, Howkin'* |
+| 🏰 **fife** | Fife & Dunfermline patter an' heritage — *Slaisterin', Bunkerin', Carnegie-ing, Up-the-Pars* |
+| ⚽ **scottish-football** | The legends an' the modern lot — *Gemmilling, McCoisting, Fergie-ing, McTominaying, Ya beauty* |
+| 🎶 **scottish-culture** | Songs, films, scran, sayings, landmarks — *Walkin'-500-Miles, Deep-frying, Painting-the-Forth-Bridge* |
+| 🎬 **famous-scots** | Comedy, telly, music — *Big-Yin-ing, Connery-ing, Still-Gaming, Rab-C-ing* |
+| 🏴󠁧󠁢󠁳󠁣󠁴󠁿 **the-full-haggis** | The hale jingbang. 160 words o' glorious chaos. |
 
-Full word lists with meanings and sources: **[reference.md](reference.md)**.
+Every word, wi' its meaning an' where it's verified, lives in
+**[reference.md](reference.md)** — dead handy when somebody asks "whit in the name
+o' the wee man does *plowterin'* mean?"
 
-## Install
+## Gettin' it goin' (aboot twa minutes)
 
-Needs [`jq`](https://jqlang.github.io/jq/) (`brew install jq`).
+Ye'll need [`jq`](https://jqlang.github.io/jq/) — if ye huvnae got it,
+`brew install jq` an' yer sorted.
 
 ```sh
+# 1. grab the repo
 git clone https://github.com/cla1redonald/claude-spinner-themes.git
 cd claude-spinner-themes
-# optional: put the switcher on your PATH
-ln -s "$PWD/bin/spinner-theme" /usr/local/bin/spinner-theme   # or /opt/homebrew/bin
+
+# 2. (optional) make the switcher work frae anywhere
+ln -s "$PWD/bin/spinner-theme" /opt/homebrew/bin/spinner-theme   # Apple Silicon
+# or /usr/local/bin/spinner-theme on Intel Macs
+
+# 3. pick yer theme
+spinner-theme set the-full-haggis --emoji-rotate
+
+# 4. restart Claude Code — an' awa ye go
 ```
 
-## Use
+That's the lot. The change lands in yer `~/.claude/settings.json`; a restart (or a
+new session) an' it'll show its face.
+
+## Livin' wi' it
 
 ```sh
-spinner-theme list                    # see all themes; the active one is marked *
-spinner-theme set fife                # apply a theme (plain words)
-spinner-theme set scottish-football --emoji   # add the theme's default emoji (⚽)
-spinner-theme set the-full-haggis --emoji 🦄  # choose one emoji for every word
-spinner-theme set the-full-haggis --emoji-rotate       # cycle a Scottish set per word
-spinner-theme set fife --emoji-rotate 🏴󠁧󠁢󠁳󠁣󠁴󠁿 🦄 🦕   # cycle your own set
-spinner-theme current                 # show the active theme + its words
-spinner-theme mode append             # mix your theme INTO Claude's defaults
-spinner-theme off                     # back to Claude's normal words
-spinner-theme restore                 # undo the last change
+spinner-theme list                  # see every theme; the active wan has a *
+spinner-theme set fife              # switch theme (plain words)
+spinner-theme set fife --emoji      # …wi' that theme's wee emoji
+spinner-theme set fife --emoji-rotate   # …wi' a rotating Scottish set
+spinner-theme current               # whit's on the noo?
+spinner-theme mode append           # sprinkle yer words INTAE Claude's normal wans
+spinner-theme off                   # back tae plain auld "Thinking…"
+spinner-theme restore               # undae the last change
 ```
 
-**Restart Claude Code** (or start a new session) to see the change.
+## A bit o' sparkle ✨
 
-### Graphics
+The words are jist text, so ye can dress them up wi' emoji:
 
-The words are just strings, so emoji work: 🦄 (Scotland's national animal), 🦕
-(stand-in for Nessie), 🏰, ⚽, 🥃, 🎶. Two ways to add them:
+- `--emoji` pits wan wee picture on every word (🦄 by default).
+- `--emoji-rotate` **cycles a set** so it changes as Claude thinks — the default's
+  🏴󠁧󠁢󠁳󠁣󠁴󠁿 🦄 🦕 🏰 ⚽ 🥃 🎶 (flag, unicorn, Nessie, castle, fitba, whisky,
+  bagpipes). Want yer ain? `spinner-theme set fife --emoji-rotate 🏴󠁧󠁢󠁳󠁣󠁴󠁿 🦄 🦕`.
 
-- `--emoji [CHAR]` puts one emoji on every word.
-- `--emoji-rotate [CHARS…]` **cycles** a set across the words, so the spinner
-  alternates as it thinks. Default set: 🏴󠁧󠁢󠁳󠁣󠁴󠁿 🦄 🦕 🏰 ⚽ 🥃 🎶.
+Twa wee honesty notes: there's **nae thistle emoji** (Unicode's done Scotland
+dirty there), an' the **Scotland flag** 🏴󠁧󠁢󠁳󠁣󠁴󠁿 disnae draw richt in every
+terminal — some show a plain black flag or empty boxes. Gie yours a swatch wi'
+`printf '%s\n' "🏴󠁧󠁢󠁳󠁣󠁴󠁿"`; if it's a Saltire, yer laughin'.
 
-Two honest limits:
+## Will it caw the legs frae yer settings? (Naw.)
 
-- The **Scotland flag emoji** 🏴󠁧󠁢󠁳󠁣󠁴󠁿 is a "subdivision flag" tag sequence that
-  some terminal fonts don't render (you'd get a plain black flag or boxes). It
-  works in many modern terminals — `printf '%s\n' "🏴󠁧󠁢󠁳󠁣󠁴󠁿"` to check yours.
-- There is **no thistle emoji** in Unicode. Sorry. 🌿 is the nearest dodge.
+The switcher's canny. It **only ever touches the `spinnerVerbs` key** — everything
+else in yer settings is left exactly as it wis (it edits wi' `jq`, nae clumsy
+find-an'-replace). Afore any change it **takes a backup**
+(`settings.json.bak.spinner`), it **checks the result's still valid** afore it
+saves, an' `spinner-theme restore` pits it straight back. Want tae try it on a
+throwaway file first? `CLAUDE_SETTINGS=/tmp/test.json spinner-theme set fife`.
 
-## Is it safe?
+## Nae havers — these are the real McCoy
 
-Yes. The switcher only ever touches the `spinnerVerbs` key in your
-`~/.claude/settings.json` — every other setting is preserved (it edits via `jq`,
-never a hand-rewrite). It **backs up** to `settings.json.bak.spinner` before any
-change, **validates** the result is valid JSON, and `restore` rolls back. Point
-it at a different file with `CLAUDE_SETTINGS=/path spinner-theme …`.
+The Scots an' Fife words are the genuine article. Every mainstream Scots word wis
+checked against the **[Dictionaries of the Scots Language](https://dsl.ac.uk)**
+(the scholarly national dictionary) or Wiktionary, an' the Fife wans come frae
+local dialect glossaries. The fitba an' culture references got fact-checked an'
+aw — which is how a certain midfielder quietly stayed in as a Scotland regular
+efter it turned oot he'd missed the 2026 finals injured. Where a word wis shoogly
+on its spellin' or meanin', it wis left oot rather than invented. The receipts are
+in **[reference.md](reference.md)**.
 
-## A note on accuracy
+## Roll yer ain
 
-The `scots-words` and `fife` themes aren't made up. Every mainstream Scots word
-was checked against the **[Dictionaries of the Scots Language](https://dsl.ac.uk)**
-(the scholarly national dictionary) or **Wiktionary**; Fife terms come from
-local dialect glossaries. The football and culture references were fact-checked
-too — which is how a certain midfielder got left out of the squad after he
-turned out to be injured. Meanings and sources are in
-**[reference.md](reference.md)**. Where a word's spelling or sense was uncertain,
-it was left out rather than invented.
+A theme's jist a wee JSON file:
 
-## Add your own
+```json
+{ "mode": "replace", "emoji": "🦄", "verbs": ["Swithering", "Havering", "Dwammin'"] }
+```
 
-Themes are just JSON: `{ "mode": "replace", "emoji": "🦄", "verbs": [ ... ] }`.
-Drop a new file in `themes/`, and it shows up in `spinner-theme list`. Rebuild
-`the-full-haggis` with:
+Drap a new wan in `themes/`, an' it shows up in `spinner-theme list` aw by itsel.
+Want it folded intae the everything-theme? Rebuild it:
 
 ```sh
 jq -s '{mode:"replace", emoji:"🦄", verbs:(map(.verbs)|add|unique)}' \
-  themes/scots-words.json themes/fife.json themes/scottish-football.json \
-  themes/scottish-culture.json themes/famous-scots.json > themes/the-full-haggis.json
+  themes/*.json > themes/the-full-haggis.json
 ```
+
+## Bonus: while yer in there onywey
+
+Fancy seein' how much o' yer session ye've burnt through, richt in Claude Code's
+status line? It's there for the takin' — `rate_limits.five_hour.used_percentage`
+(the rollin' session limit) an' `rate_limits.seven_day.used_percentage`. A status
+line like `~/code  Fable  ctx:34%  session:61%  7d:12%` is a couple o' `jq` lines
+awa.
 
 ## Licence
 
-MIT — see [LICENSE](LICENSE). Wha's like us?
+MIT — see [LICENSE](LICENSE). Use it, fork it, mak a Geordie wan. **Wha's like us?
+Damn few, an' they're aw deid.** 🏴󠁧󠁢󠁳󠁣󠁴󠁿
