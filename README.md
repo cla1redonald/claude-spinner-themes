@@ -45,7 +45,9 @@ ln -s "$PWD/bin/spinner-theme" /usr/local/bin/spinner-theme   # or /opt/homebrew
 spinner-theme list                    # see all themes; the active one is marked *
 spinner-theme set fife                # apply a theme (plain words)
 spinner-theme set scottish-football --emoji   # add the theme's default emoji (⚽)
-spinner-theme set the-full-haggis --emoji 🦄  # choose your own emoji
+spinner-theme set the-full-haggis --emoji 🦄  # choose one emoji for every word
+spinner-theme set the-full-haggis --emoji-rotate       # cycle a Scottish set per word
+spinner-theme set fife --emoji-rotate 🏴󠁧󠁢󠁳󠁣󠁴󠁿 🦄 🦕   # cycle your own set
 spinner-theme current                 # show the active theme + its words
 spinner-theme mode append             # mix your theme INTO Claude's defaults
 spinner-theme off                     # back to Claude's normal words
@@ -56,12 +58,18 @@ spinner-theme restore                 # undo the last change
 
 ### Graphics
 
-The words are just strings, so emoji work: 🦄 (Scotland's national animal),
-🏰, ⚽, 🥃. Pass `--emoji` to garnish every word. Two honest limits:
+The words are just strings, so emoji work: 🦄 (Scotland's national animal), 🦕
+(stand-in for Nessie), 🏰, ⚽, 🥃, 🎶. Two ways to add them:
 
-- The **Scotland flag emoji** 🏴󠁧󠁢󠁳󠁣󠁴󠁿 is a "subdivision flag" sequence that
-  **most terminal fonts don't render** — you'll often get a plain black flag or
-  empty boxes. Use it if your terminal handles it; unicorn/castle/football are safe.
+- `--emoji [CHAR]` puts one emoji on every word.
+- `--emoji-rotate [CHARS…]` **cycles** a set across the words, so the spinner
+  alternates as it thinks. Default set: 🏴󠁧󠁢󠁳󠁣󠁴󠁿 🦄 🦕 🏰 ⚽ 🥃 🎶.
+
+Two honest limits:
+
+- The **Scotland flag emoji** 🏴󠁧󠁢󠁳󠁣󠁴󠁿 is a "subdivision flag" tag sequence that
+  some terminal fonts don't render (you'd get a plain black flag or boxes). It
+  works in many modern terminals — `printf '%s\n' "🏴󠁧󠁢󠁳󠁣󠁴󠁿"` to check yours.
 - There is **no thistle emoji** in Unicode. Sorry. 🌿 is the nearest dodge.
 
 ## Is it safe?
