@@ -45,6 +45,20 @@ Every word, with its meaning and where it's verified, lives in
 **[reference.md](reference.md)** — handy when someone asks "what on earth does
 *plowterin'* mean?"
 
+<details>
+<summary><strong>See all 160 words in <code>the-full-haggis</code></strong> — grouped by their matched emoji</summary>
+
+- **🦄 dictionary words** (40) — Birlin', Bletherin', Boorachin', Collieshangie, Coorie-in', Coupin', Crabbit, Daunerin', Dreich, Duntin', Dwammin', Ettlin', Fanklin', Fettlin', Footering, Girnin', Glaikit, Gowkin', Greetin', Guddlin', Havering, Howkin', Jalousin', Joukin', Keekin', Plowterin', Puggled, Reddin'-up, Scunnered, Shooglin', Stooshie, Stottin', Stramashin', Stravaigin', Swithering, Tholin', Threapin', Wabbit, Warslin', Wheechin'
+- **🏰 culture, castles & landmarks** (36) — Bealin', Bunkerin', Burns-Nighting, Caber-tossing, Carnegie-ing, Castle-Rocking, Clipin', Culrossing, Dichtin', Doon the Lang Toun, Doutit, Drookit, Eh ken, Falkirk-Wheeling, Forth-Crossing, Glen-daunerin', Hogmanaying, Houkin', Howkin' coal, Kelpie-watching, Kennin', King-Robert-the-Brucing, Loch-Lomonding, Loupin', Munro-bagging, Neebsin', One-o'Clock-Gunning, Painting-the-Forth-Bridge, Pure Barry, Skelpin', Slaisterin', St-Andrews-ing, Stirling-Castling, The Auld Grey Toun, Up-the-Pars, Wallace-Monumenting
+- **⚽ football** (33) — Baxtering, Bicycle-kicking, Bremnering, Busby-ing, Che-Adamsing, Clarke-ing, Denis-Lawing, Dykesing, Fergie-ing, Gemmilling, Gilmouring, Hampden-Roaring, King-Kennying, Lisbon-Lioning, McCoisting, McGinning, McTominaying, Nutmegging, Park-the-bussing, Rabona-ing, Robertson-overlapping, Screamering, Shankly-ing, Sounessing, Steining, Stepovering, Stramashing, Tartan-Army-ing, Tierney-ing, Top-binsing, Volleying, Worldie-hunting, Ya beauty
+- **🎶 songs & music** (18) — Auld-Lang-Syning, Biffy-ing, Bonnie-Banking, Caledonia-ing, Calvin-Harrising, Capaldi-ing, Ceilidhing, Cinnamon-ing, Dignity-ing, Flower-of-Scotland, Here-We-Go, No-Scotland-No-Partying, Skirling, Speed-Bonnie-Boating, Sunshine-on-Leithing, Takin'-the-High-Road, Walkin'-500-Miles, Yes-Sir-I-Can-Boogie-ing
+- **🎬 famous Scots** (16) — Big-Yin-ing, Connery-ing, Gonnae-No'-Dae-That, Jack-an'-Victoring, Limmying, Logie-Bairding, McGregoring, Murray-ing, Nesbitting, Rab-C-ing, Rabbie-Burnsing, Shaken-Not-Stirring, Still-Gaming, Taggart-ing, Tennanting, Tuckering
+- **🏴󠁧󠁢󠁳󠁣󠁴󠁿 sayings & the catch-all** (13) — Bilin'-Yer-Heid, Bravehearting, Choose-Life-ing, Freedom-shouting, Haste-Ye-Back, Haud-Yer-Wheesht, Keepin'-the-Heid, Lang-May-Yer-Lum-Reek, Nessie-hunting, Pure-Dead-Brilliant, Sair-Fechting, Wha's-Like-Us, Yer-Bum's-Oot-the-Windae
+- **🍽️ food** (2) — Deep-frying, Haggis-chasing
+- **🥃 drink** (2) — Drammin', Irn-Bruing
+
+</details>
+
 ## Get it going (about two minutes)
 
 You'll need [`jq`](https://jqlang.github.io/jq/) — if you haven't got it,
