@@ -4,16 +4,19 @@
 # spinnerVerbs key (everything else is preserved via jq), and validates after.
 #
 #   spinner-theme list                list themes + show which is active
-#   spinner-theme set <name>          apply a theme (plain words)
-#   spinner-theme set <name> --emoji  apply with the theme's default emoji
-#   spinner-theme set <name> --emoji 🦄   apply with an emoji you choose
-#   spinner-theme current             print the active theme + its verbs
-#   spinner-theme mode <m>            set mode of active theme: replace | append
-#   spinner-theme off                 remove spinnerVerbs (back to Claude defaults)
-#   spinner-theme restore             roll back to the last backup
+#   spinner-theme set <name>                apply a theme (plain words)
+#   spinner-theme set <name> --emoji        apply with the theme's default emoji
+#   spinner-theme set <name> --emoji 🦄     apply with one emoji you choose
+#   spinner-theme set <name> --emoji-rotate  cycle a Scottish emoji set per word
+#   spinner-theme set <name> --emoji-rotate 🦄 🏰 ⚽   cycle your own set
+#   spinner-theme current                   print the active theme + its verbs
+#   spinner-theme mode <m>                  set mode of active theme: replace | append
+#   spinner-theme off                       remove spinnerVerbs (Claude defaults)
+#   spinner-theme restore                   roll back to the last backup
 #
-# Note: emoji render in most modern terminals; the Scotland flag 🏴 (subdivision
-# sequence) is unreliable in terminal fonts. Unicorn/castle/football render fine.
+# Default rotate set: 🏴 🦄 🦕 🏰 ⚽ 🥃 🎶 (flag, unicorn, Nessie, castle,
+# football, whisky, bagpipes). Note: the Scotland flag 🏴 is a subdivision-tag
+# sequence that some terminal fonts don't render — check yours before relying on it.
 #
 # Settings file defaults to ~/.claude/settings.json (override with CLAUDE_SETTINGS).
 set -euo pipefail
@@ -72,25 +75,43 @@ case "${1:-}" in
     ;;
 
   set)
-    name="${2:?usage: spinner-theme set <name> [--emoji [CHAR]]}"
+    name="${2:?usage: spinner-theme set <name> [--emoji [CHAR] | --emoji-rotate [CHARS...]]}"
     f="$(theme_file "$name")"
     [ -f "$f" ] || { echo "error: no such theme '$name'"; list_themes; exit 1; }
-    emoji=""
-    if [ "${3:-}" = "--emoji" ]; then
-      emoji="${4:-$(jq -r '.emoji // "🦄"' "$f")}"
-    fi
+    n="$(jq '.verbs|length' "$f")"
+    opt="${3:-}"
     backup
-    if [ -n "$emoji" ]; then
-      jq --slurpfile t "$f" --arg e "$emoji" \
-        '.spinnerVerbs = {mode: $t[0].mode, verbs: ($t[0].verbs | map($e + " " + .))}' \
-        "$SETTINGS" | write_settings
-      echo "Set spinner theme to '$name' with $emoji ($(jq '.verbs|length' "$f") words). Restart Claude Code to see it."
-    else
-      jq --slurpfile t "$f" \
-        '.spinnerVerbs = {mode: $t[0].mode, verbs: $t[0].verbs}' \
-        "$SETTINGS" | write_settings
-      echo "Set spinner theme to '$name' ($(jq '.verbs|length' "$f") words). Restart Claude Code to see it."
-    fi
+    case "$opt" in
+      --emoji)
+        emoji="${4:-$(jq -r '.emoji // "🦄"' "$f")}"
+        jq --slurpfile t "$f" --arg e "$emoji" \
+          '.spinnerVerbs = {mode: $t[0].mode, verbs: ($t[0].verbs | map($e + " " + .))}' \
+          "$SETTINGS" | write_settings
+        echo "Set '$name' with $emoji ($n words). Restart Claude Code to see it."
+        ;;
+      --emoji-rotate)
+        shift 3 2>/dev/null || shift $#
+        if [ "$#" -gt 0 ]; then
+          emojis="$(printf '%s\n' "$@" | jq -R . | jq -cs .)"
+        else
+          emojis='["🏴󠁧󠁢󠁳󠁣󠁴󠁿","🦄","🦕","🏰","⚽","🥃","🎶"]'
+        fi
+        jq --slurpfile t "$f" --argjson e "$emojis" \
+          '.spinnerVerbs = {mode: $t[0].mode,
+             verbs: [ $t[0].verbs | to_entries[] | ($e[.key % ($e|length)] + " " + .value) ]}' \
+          "$SETTINGS" | write_settings
+        echo "Set '$name' with rotating emoji $(echo "$emojis" | jq -r 'join(" ")') ($n words). Restart Claude Code to see it."
+        ;;
+      "")
+        jq --slurpfile t "$f" \
+          '.spinnerVerbs = {mode: $t[0].mode, verbs: $t[0].verbs}' \
+          "$SETTINGS" | write_settings
+        echo "Set '$name' ($n words). Restart Claude Code to see it."
+        ;;
+      *)
+        echo "error: unknown option '$opt' (use --emoji or --emoji-rotate)"; exit 1
+        ;;
+    esac
     ;;
 
   mode)
