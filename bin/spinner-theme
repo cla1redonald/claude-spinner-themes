@@ -5,6 +5,7 @@
 #
 #   spinner-theme list                list themes + show which is active
 #   spinner-theme set <name>                apply a theme (plain words)
+#   spinner-theme set <name> --emoji-match   match each word's emoji to its meaning
 #   spinner-theme set <name> --emoji        apply with the theme's default emoji
 #   spinner-theme set <name> --emoji 🦄     apply with one emoji you choose
 #   spinner-theme set <name> --emoji-rotate  cycle a Scottish emoji set per word
@@ -48,8 +49,9 @@ current_name() {
   jq -e '.spinnerVerbs.verbs' "$SETTINGS" >/dev/null 2>&1 || { echo ""; return 1; }
   local strip='map(sub("^[^A-Za-z]+\\s+";"")) | sort'
   local cur; cur="$(jq -c ".spinnerVerbs.verbs | $strip" "$SETTINGS")"
+  local txt='map(if type=="object" then .verb else . end)'
   for f in "$THEMES_DIR"/*.json; do
-    if [ "$cur" = "$(jq -c ".verbs | $strip" "$f")" ]; then basename "$f" .json; return 0; fi
+    if [ "$cur" = "$(jq -c "(.verbs | $txt) | $strip" "$f")" ]; then basename "$f" .json; return 0; fi
   done
   echo "custom"; return 0
 }
@@ -75,7 +77,7 @@ case "${1:-}" in
     ;;
 
   set)
-    name="${2:?usage: spinner-theme set <name> [--emoji [CHAR] | --emoji-rotate [CHARS...]]}"
+    name="${2:?usage: spinner-theme set <name> [--emoji-match | --emoji [CHAR] | --emoji-rotate [CHARS...]]}"
     f="$(theme_file "$name")"
     [ -f "$f" ] || { echo "error: no such theme '$name'"; list_themes; exit 1; }
     n="$(jq '.verbs|length' "$f")"
@@ -85,9 +87,20 @@ case "${1:-}" in
       --emoji)
         emoji="${4:-$(jq -r '.emoji // "🦄"' "$f")}"
         jq --slurpfile t "$f" --arg e "$emoji" \
-          '.spinnerVerbs = {mode: $t[0].mode, verbs: ($t[0].verbs | map($e + " " + .))}' \
+          '.spinnerVerbs = {mode: $t[0].mode,
+             verbs: ($t[0].verbs | map((if type=="object" then .verb else . end) as $v | $e + " " + $v))}' \
           "$SETTINGS" | write_settings
         echo "Set '$name' with $emoji ($n words). Restart Claude Code to see it."
+        ;;
+      --emoji-match)
+        jq --slurpfile t "$f" \
+          '($t[0].emoji // "🏴󠁧󠁢󠁳󠁣󠁴󠁿") as $d
+           | .spinnerVerbs = {mode: $t[0].mode,
+               verbs: ($t[0].verbs | map(
+                 if type=="object" then ((.emoji // $d) + " " + .verb)
+                 else ($d + " " + .) end))}' \
+          "$SETTINGS" | write_settings
+        echo "Set '$name' with matched emoji ($n words). Restart Claude Code to see it."
         ;;
       --emoji-rotate)
         shift 3 2>/dev/null || shift $#
@@ -98,18 +111,21 @@ case "${1:-}" in
         fi
         jq --slurpfile t "$f" --argjson e "$emojis" \
           '.spinnerVerbs = {mode: $t[0].mode,
-             verbs: [ $t[0].verbs | to_entries[] | ($e[.key % ($e|length)] + " " + .value) ]}' \
+             verbs: [ $t[0].verbs | to_entries[]
+                      | ($e[.key % ($e|length)] + " "
+                         + (if (.value|type)=="object" then .value.verb else .value end)) ]}' \
           "$SETTINGS" | write_settings
         echo "Set '$name' with rotating emoji $(echo "$emojis" | jq -r 'join(" ")') ($n words). Restart Claude Code to see it."
         ;;
       "")
         jq --slurpfile t "$f" \
-          '.spinnerVerbs = {mode: $t[0].mode, verbs: $t[0].verbs}' \
+          '.spinnerVerbs = {mode: $t[0].mode,
+             verbs: ($t[0].verbs | map(if type=="object" then .verb else . end))}' \
           "$SETTINGS" | write_settings
         echo "Set '$name' ($n words). Restart Claude Code to see it."
         ;;
       *)
-        echo "error: unknown option '$opt' (use --emoji or --emoji-rotate)"; exit 1
+        echo "error: unknown option '$opt' (use --emoji-match, --emoji, or --emoji-rotate)"; exit 1
         ;;
     esac
     ;;

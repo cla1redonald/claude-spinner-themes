@@ -1,166 +1,646 @@
 {
   "mode": "replace",
-  "emoji": "🦄",
+  "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
   "verbs": [
-    "Auld-Lang-Syning",
-    "Baxtering",
-    "Bealin'",
-    "Bicycle-kicking",
-    "Biffy-ing",
-    "Big-Yin-ing",
-    "Bilin'-Yer-Heid",
-    "Birlin'",
-    "Bletherin'",
-    "Bonnie-Banking",
-    "Boorachin'",
-    "Bravehearting",
-    "Bremnering",
-    "Bunkerin'",
-    "Burns-Nighting",
-    "Busby-ing",
-    "Caber-tossing",
-    "Caledonia-ing",
-    "Calvin-Harrising",
-    "Capaldi-ing",
-    "Carnegie-ing",
-    "Castle-Rocking",
-    "Ceilidhing",
-    "Che-Adamsing",
-    "Choose-Life-ing",
-    "Cinnamon-ing",
-    "Clarke-ing",
-    "Clipin'",
-    "Collieshangie",
-    "Connery-ing",
-    "Coorie-in'",
-    "Coupin'",
-    "Crabbit",
-    "Culrossing",
-    "Daunerin'",
-    "Deep-frying",
-    "Denis-Lawing",
-    "Dichtin'",
-    "Dignity-ing",
-    "Doon the Lang Toun",
-    "Doutit",
-    "Drammin'",
-    "Dreich",
-    "Drookit",
-    "Duntin'",
-    "Dwammin'",
-    "Dykesing",
-    "Eh ken",
-    "Ettlin'",
-    "Falkirk-Wheeling",
-    "Fanklin'",
-    "Fergie-ing",
-    "Fettlin'",
-    "Flower-of-Scotland",
-    "Footering",
-    "Forth-Crossing",
-    "Freedom-shouting",
-    "Gemmilling",
-    "Gilmouring",
-    "Girnin'",
-    "Glaikit",
-    "Glen-daunerin'",
-    "Gonnae-No'-Dae-That",
-    "Gowkin'",
-    "Greetin'",
-    "Guddlin'",
-    "Haggis-chasing",
-    "Hampden-Roaring",
-    "Haste-Ye-Back",
-    "Haud-Yer-Wheesht",
-    "Havering",
-    "Here-We-Go",
-    "Hogmanaying",
-    "Houkin'",
-    "Howkin'",
-    "Howkin' coal",
-    "Irn-Bruing",
-    "Jack-an'-Victoring",
-    "Jalousin'",
-    "Joukin'",
-    "Keekin'",
-    "Keepin'-the-Heid",
-    "Kelpie-watching",
-    "Kennin'",
-    "King-Kennying",
-    "King-Robert-the-Brucing",
-    "Lang-May-Yer-Lum-Reek",
-    "Limmying",
-    "Lisbon-Lioning",
-    "Loch-Lomonding",
-    "Logie-Bairding",
-    "Loupin'",
-    "McCoisting",
-    "McGinning",
-    "McGregoring",
-    "McTominaying",
-    "Munro-bagging",
-    "Murray-ing",
-    "Neebsin'",
-    "Nesbitting",
-    "Nessie-hunting",
-    "No-Scotland-No-Partying",
-    "Nutmegging",
-    "One-o'Clock-Gunning",
-    "Painting-the-Forth-Bridge",
-    "Park-the-bussing",
-    "Plowterin'",
-    "Puggled",
-    "Pure Barry",
-    "Pure-Dead-Brilliant",
-    "Rab-C-ing",
-    "Rabbie-Burnsing",
-    "Rabona-ing",
-    "Reddin'-up",
-    "Robertson-overlapping",
-    "Sair-Fechting",
-    "Screamering",
-    "Scunnered",
-    "Shaken-Not-Stirring",
-    "Shankly-ing",
-    "Shooglin'",
-    "Skelpin'",
-    "Skirling",
-    "Slaisterin'",
-    "Sounessing",
-    "Speed-Bonnie-Boating",
-    "St-Andrews-ing",
-    "Steining",
-    "Stepovering",
-    "Still-Gaming",
-    "Stirling-Castling",
-    "Stooshie",
-    "Stottin'",
-    "Stramashin'",
-    "Stramashing",
-    "Stravaigin'",
-    "Sunshine-on-Leithing",
-    "Swithering",
-    "Taggart-ing",
-    "Takin'-the-High-Road",
-    "Tartan-Army-ing",
-    "Tennanting",
-    "The Auld Grey Toun",
-    "Tholin'",
-    "Threapin'",
-    "Tierney-ing",
-    "Top-binsing",
-    "Tuckering",
-    "Up-the-Pars",
-    "Volleying",
-    "Wabbit",
-    "Walkin'-500-Miles",
-    "Wallace-Monumenting",
-    "Warslin'",
-    "Wha's-Like-Us",
-    "Wheechin'",
-    "Worldie-hunting",
-    "Ya beauty",
-    "Yer-Bum's-Oot-the-Windae",
-    "Yes-Sir-I-Can-Boogie-ing"
+    {
+      "verb": "Auld-Lang-Syning",
+      "emoji": "🎶"
+    },
+    {
+      "verb": "Baxtering",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Bealin'",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Bicycle-kicking",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Biffy-ing",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Big-Yin-ing",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Bilin'-Yer-Heid",
+      "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+    },
+    {
+      "verb": "Birlin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Bletherin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Bonnie-Banking",
+      "emoji": "🎶"
+    },
+    {
+      "verb": "Boorachin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Bravehearting",
+      "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+    },
+    {
+      "verb": "Bremnering",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Bunkerin'",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Burns-Nighting",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Busby-ing",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Caber-tossing",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Caledonia-ing",
+      "emoji": "🎶"
+    },
+    {
+      "verb": "Calvin-Harrising",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Capaldi-ing",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Carnegie-ing",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Castle-Rocking",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Ceilidhing",
+      "emoji": "🎶"
+    },
+    {
+      "verb": "Che-Adamsing",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Choose-Life-ing",
+      "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+    },
+    {
+      "verb": "Cinnamon-ing",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Clarke-ing",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Clipin'",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Collieshangie",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Connery-ing",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Coorie-in'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Coupin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Crabbit",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Culrossing",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Daunerin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Deep-frying",
+      "emoji": "🍽️"
+    },
+    {
+      "verb": "Denis-Lawing",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Dichtin'",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Dignity-ing",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Doon the Lang Toun",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Doutit",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Drammin'",
+      "emoji": "🥃"
+    },
+    {
+      "verb": "Dreich",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Drookit",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Duntin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Dwammin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Dykesing",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Eh ken",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Ettlin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Falkirk-Wheeling",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Fanklin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Fergie-ing",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Fettlin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Flower-of-Scotland",
+      "emoji": "🎶"
+    },
+    {
+      "verb": "Footering",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Forth-Crossing",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Freedom-shouting",
+      "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+    },
+    {
+      "verb": "Gemmilling",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Gilmouring",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Girnin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Glaikit",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Glen-daunerin'",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Gonnae-No'-Dae-That",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Gowkin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Greetin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Guddlin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Haggis-chasing",
+      "emoji": "🍽️"
+    },
+    {
+      "verb": "Hampden-Roaring",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Haste-Ye-Back",
+      "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+    },
+    {
+      "verb": "Haud-Yer-Wheesht",
+      "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+    },
+    {
+      "verb": "Havering",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Here-We-Go",
+      "emoji": "🎶"
+    },
+    {
+      "verb": "Hogmanaying",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Houkin'",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Howkin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Howkin' coal",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Irn-Bruing",
+      "emoji": "🥃"
+    },
+    {
+      "verb": "Jack-an'-Victoring",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Jalousin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Joukin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Keekin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Keepin'-the-Heid",
+      "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+    },
+    {
+      "verb": "Kelpie-watching",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Kennin'",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "King-Kennying",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "King-Robert-the-Brucing",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Lang-May-Yer-Lum-Reek",
+      "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+    },
+    {
+      "verb": "Limmying",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Lisbon-Lioning",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Loch-Lomonding",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Logie-Bairding",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Loupin'",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "McCoisting",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "McGinning",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "McGregoring",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "McTominaying",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Munro-bagging",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Murray-ing",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Neebsin'",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Nesbitting",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Nessie-hunting",
+      "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+    },
+    {
+      "verb": "No-Scotland-No-Partying",
+      "emoji": "🎶"
+    },
+    {
+      "verb": "Nutmegging",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "One-o'Clock-Gunning",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Painting-the-Forth-Bridge",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Park-the-bussing",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Plowterin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Puggled",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Pure Barry",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Pure-Dead-Brilliant",
+      "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+    },
+    {
+      "verb": "Rab-C-ing",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Rabbie-Burnsing",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Rabona-ing",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Reddin'-up",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Robertson-overlapping",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Sair-Fechting",
+      "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+    },
+    {
+      "verb": "Screamering",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Scunnered",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Shaken-Not-Stirring",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Shankly-ing",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Shooglin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Skelpin'",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Skirling",
+      "emoji": "🎶"
+    },
+    {
+      "verb": "Slaisterin'",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Sounessing",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Speed-Bonnie-Boating",
+      "emoji": "🎶"
+    },
+    {
+      "verb": "St-Andrews-ing",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Steining",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Stepovering",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Still-Gaming",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Stirling-Castling",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Stooshie",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Stottin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Stramashin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Stramashing",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Stravaigin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Sunshine-on-Leithing",
+      "emoji": "🎶"
+    },
+    {
+      "verb": "Swithering",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Taggart-ing",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Takin'-the-High-Road",
+      "emoji": "🎶"
+    },
+    {
+      "verb": "Tartan-Army-ing",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Tennanting",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "The Auld Grey Toun",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Tholin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Threapin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Tierney-ing",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Top-binsing",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Tuckering",
+      "emoji": "🎬"
+    },
+    {
+      "verb": "Up-the-Pars",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Volleying",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Wabbit",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Walkin'-500-Miles",
+      "emoji": "🎶"
+    },
+    {
+      "verb": "Wallace-Monumenting",
+      "emoji": "🏰"
+    },
+    {
+      "verb": "Warslin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Wha's-Like-Us",
+      "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+    },
+    {
+      "verb": "Wheechin'",
+      "emoji": "🦄"
+    },
+    {
+      "verb": "Worldie-hunting",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Ya beauty",
+      "emoji": "⚽"
+    },
+    {
+      "verb": "Yer-Bum's-Oot-the-Windae",
+      "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+    },
+    {
+      "verb": "Yes-Sir-I-Can-Boogie-ing",
+      "emoji": "🎶"
+    }
   ]
 }

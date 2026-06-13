@@ -59,7 +59,7 @@ ln -s "$PWD/bin/spinner-theme" /opt/homebrew/bin/spinner-theme   # Apple Silicon
 # or /usr/local/bin/spinner-theme on Intel Macs
 
 # 3. pick a theme
-spinner-theme set the-full-haggis --emoji-rotate
+spinner-theme set the-full-haggis --emoji-match
 
 # 4. restart Claude Code — and away you go
 ```
@@ -72,8 +72,9 @@ new session) and it shows up.
 ```sh
 spinner-theme list                  # see every theme; the active one has a *
 spinner-theme set fife              # switch theme (plain words)
-spinner-theme set fife --emoji      # …with that theme's wee emoji
-spinner-theme set fife --emoji-rotate   # …with a rotating Scottish set
+spinner-theme set fife --emoji-match # …emoji matched to each word's meaning
+spinner-theme set fife --emoji      # …one emoji on every word
+spinner-theme set fife --emoji-rotate   # …a rotating Scottish set (random parade)
 spinner-theme current               # what's on right now?
 spinner-theme mode append           # mix your words INTO Claude's normal ones
 spinner-theme off                   # back to plain old "Thinking…"
@@ -82,12 +83,28 @@ spinner-theme restore               # undo the last change
 
 ## A bit of sparkle ✨
 
-The words are just text, so you can dress them up with emoji:
+The words are just text, so you can dress them up with emoji — three ways:
 
-- `--emoji` puts one wee picture on every word (🦄 by default).
-- `--emoji-rotate` **cycles a set** so it changes as Claude thinks — the default
-  is 🏴󠁧󠁢󠁳󠁣󠁴󠁿 🦄 🦕 🏰 ⚽ 🥃 🎶 (flag, unicorn, Nessie, castle, football, whisky,
-  bagpipes). Want your own? `spinner-theme set fife --emoji-rotate 🏴󠁧󠁢󠁳󠁣󠁴󠁿 🦄 🦕`.
+- `--emoji-match` **fits the emoji to the word's meaning** (the nice one). A
+  football word gets ⚽, a song gets 🎶, a dram gets 🥃 — so in *the-full-haggis*
+  you get the right wee picture on every word instead of pot luck:
+
+  | What the word is about | Emoji |
+  |---|---|
+  | Football | ⚽ |
+  | Songs, music, chants | 🎶 |
+  | Food | 🍽️ |
+  | Drink | 🥃 |
+  | Castles, landmarks, places | 🏰 |
+  | Dictionary Scots words | 🦄 |
+  | Famous Scots | 🎬 |
+  | Sayings & anything in-between | 🏴󠁧󠁢󠁳󠁣󠁴󠁿 (the Saltire, our catch-all) |
+
+  Each theme also has a default, so single themes match cleanly too — *fife* all
+  🏰, *scottish-football* all ⚽.
+- `--emoji` puts **one** wee picture on every word (🦄 by default).
+- `--emoji-rotate` **cycles a set** regardless of meaning — a random parade. The
+  default is 🏴󠁧󠁢󠁳󠁣󠁴󠁿 🦄 🦕 🏰 ⚽ 🥃 🎶. Want your own? `spinner-theme set fife --emoji-rotate 🏴󠁧󠁢󠁳󠁣󠁴󠁿 🦄 🦕`.
 
 <p align="center">
   <img src="assets/demo-nessie-hunting.gif" alt="Claude Code's spinner reading 'Nessie-hunting…' with a wee dinosaur" width="620">
@@ -139,7 +156,7 @@ jq -s '{mode:"replace", emoji:"🦄", verbs:(map(.verbs)|add|unique)}' \
 **Stuck for ideas?** Scottish is just *my* version — the format goes anywhere,
 because it's only words:
 
-- **A Geordie one** 🍺 — *Howay-ing, Gannin', Canny-ing, Wey-aye-ing…*
+- **A Geordie one** — *Howay-ing, Gannin', Canny-ing, Wey-aye-ing…*
 - **An Aussie one** 🦘 — *Havin'-a-squiz, Chuckin'-a-sickie, She'll-be-right-ing…*
 - **Your actual job** — make the spinner talk shop:
   - **QA** 🐛 — *Repro-ing, Flakin', Edge-casing, Regressing, Ship-it-ing…*
