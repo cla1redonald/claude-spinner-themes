@@ -7,14 +7,15 @@ You know the wee word that flickers while Claude Code is working — *Thinking�
 more character:
 
 ```
-🏴󠁧󠁢󠁳󠁣󠁴󠁿 Swithering…        ⚽ Bicycle-kicking…        🦕 Nessie-hunting…
-🦄 Jalousin…           🏰 Up-the-Pars…           🥃 Drammin…
-🎶 Painting-the-Forth-Bridge…              🦄 Havering…
+🦄 Swithering…        ⚽ Bicycle-kicking…        🏰 Stirling-Castling…
+🎬 Connery-ing…       🥃 Drammin'…             🍽️ Deep-frying…
+🎶 Walkin'-500-Miles…              🏴󠁧󠁢󠁳󠁣󠁴󠁿 Haud-Yer-Wheesht…
 ```
 
-Six themes, a one-line switch between them, and a wee unicorn (or a rotating
-parade of Saltires, castles and Nessie) on every word. It's daft — and weirdly
-lovely to watch your editor have a *swither* instead of a think.
+Six themes, a one-line switch between them, and the right wee emoji matched to
+every word — a fitba player gets a ⚽, a song gets a 🎶 (or a rotating parade of
+Saltires, castles and Nessie, if you'd rather). It's daft — and weirdly lovely to
+watch your editor have a *swither* instead of a think.
 
 <p align="center">
   <img src="assets/demo-birlin.gif" alt="Claude Code's spinner reading 'Birlin'…' with a Saltire" width="620">
@@ -36,13 +37,27 @@ only ever changes that one setting.
 | 🦄 **scottish-words** | Real dictionary Scottish words for thinking and faffing — *Swithering, Jalousin', Dwammin', Dreich, Howkin'* |
 | 🏰 **fife** | Fife & Dunfermline patter and heritage — *Slaisterin', Bunkerin', Carnegie-ing, Up-the-Pars* |
 | ⚽ **scottish-football** | Legends and the modern lot — *Gemmilling, McCoisting, Fergie-ing, McTominaying, Ya beauty* |
-| 🎶 **scottish-culture** | Songs, films, food, sayings, landmarks — *Walkin'-500-Miles, Deep-frying, Painting-the-Forth-Bridge* |
+| 🏰 **scottish-culture** | Songs, films, food, sayings, landmarks — *Walkin'-500-Miles, Deep-frying, Painting-the-Forth-Bridge* |
 | 🎬 **famous-scots** | Comedy, telly, music — *Big-Yin-ing, Connery-ing, Still-Gaming, Rab-C-ing* |
 | 🏴󠁧󠁢󠁳󠁣󠁴󠁿 **the-full-haggis** | The lot, mixed. 160 words of glorious chaos. |
 
 Every word, with its meaning and where it's verified, lives in
 **[reference.md](reference.md)** — handy when someone asks "what on earth does
 *plowterin'* mean?"
+
+<details>
+<summary><strong>See all 160 words in <code>the-full-haggis</code></strong> — grouped by their matched emoji</summary>
+
+- **🦄 dictionary words** (40) — Birlin', Bletherin', Boorachin', Collieshangie, Coorie-in', Coupin', Crabbit, Daunerin', Dreich, Duntin', Dwammin', Ettlin', Fanklin', Fettlin', Footering, Girnin', Glaikit, Gowkin', Greetin', Guddlin', Havering, Howkin', Jalousin', Joukin', Keekin', Plowterin', Puggled, Reddin'-up, Scunnered, Shooglin', Stooshie, Stottin', Stramashin', Stravaigin', Swithering, Tholin', Threapin', Wabbit, Warslin', Wheechin'
+- **🏰 culture, castles & landmarks** (36) — Bealin', Bunkerin', Burns-Nighting, Caber-tossing, Carnegie-ing, Castle-Rocking, Clipin', Culrossing, Dichtin', Doon the Lang Toun, Doutit, Drookit, Eh ken, Falkirk-Wheeling, Forth-Crossing, Glen-daunerin', Hogmanaying, Houkin', Howkin' coal, Kelpie-watching, Kennin', King-Robert-the-Brucing, Loch-Lomonding, Loupin', Munro-bagging, Neebsin', One-o'Clock-Gunning, Painting-the-Forth-Bridge, Pure Barry, Skelpin', Slaisterin', St-Andrews-ing, Stirling-Castling, The Auld Grey Toun, Up-the-Pars, Wallace-Monumenting
+- **⚽ football** (33) — Baxtering, Bicycle-kicking, Bremnering, Busby-ing, Che-Adamsing, Clarke-ing, Denis-Lawing, Dykesing, Fergie-ing, Gemmilling, Gilmouring, Hampden-Roaring, King-Kennying, Lisbon-Lioning, McCoisting, McGinning, McTominaying, Nutmegging, Park-the-bussing, Rabona-ing, Robertson-overlapping, Screamering, Shankly-ing, Sounessing, Steining, Stepovering, Stramashing, Tartan-Army-ing, Tierney-ing, Top-binsing, Volleying, Worldie-hunting, Ya beauty
+- **🎶 songs & music** (18) — Auld-Lang-Syning, Biffy-ing, Bonnie-Banking, Caledonia-ing, Calvin-Harrising, Capaldi-ing, Ceilidhing, Cinnamon-ing, Dignity-ing, Flower-of-Scotland, Here-We-Go, No-Scotland-No-Partying, Skirling, Speed-Bonnie-Boating, Sunshine-on-Leithing, Takin'-the-High-Road, Walkin'-500-Miles, Yes-Sir-I-Can-Boogie-ing
+- **🎬 famous Scots** (16) — Big-Yin-ing, Connery-ing, Gonnae-No'-Dae-That, Jack-an'-Victoring, Limmying, Logie-Bairding, McGregoring, Murray-ing, Nesbitting, Rab-C-ing, Rabbie-Burnsing, Shaken-Not-Stirring, Still-Gaming, Taggart-ing, Tennanting, Tuckering
+- **🏴󠁧󠁢󠁳󠁣󠁴󠁿 sayings & the catch-all** (13) — Bilin'-Yer-Heid, Bravehearting, Choose-Life-ing, Freedom-shouting, Haste-Ye-Back, Haud-Yer-Wheesht, Keepin'-the-Heid, Lang-May-Yer-Lum-Reek, Nessie-hunting, Pure-Dead-Brilliant, Sair-Fechting, Wha's-Like-Us, Yer-Bum's-Oot-the-Windae
+- **🍽️ food** (2) — Deep-frying, Haggis-chasing
+- **🥃 drink** (2) — Drammin', Irn-Bruing
+
+</details>
 
 ## Get it going (about two minutes)
 
@@ -96,7 +111,7 @@ The words are just text, so you can dress them up with emoji — three ways:
   | Food | 🍽️ |
   | Drink | 🥃 |
   | Castles, landmarks, places | 🏰 |
-  | Dictionary Scots words | 🦄 |
+  | Dictionary Scottish words | 🦄 |
   | Famous Scots | 🎬 |
   | Sayings & anything in-between | 🏴󠁧󠁢󠁳󠁣󠁴󠁿 (the Saltire, our catch-all) |
 
@@ -139,18 +154,34 @@ or meaning was shoogly, it was left out rather than invented. The receipts are i
 
 ## Make your own
 
-A theme is just a wee JSON file:
+A theme is just a wee JSON file. Each verb is either a plain word (it inherits the
+theme's default `emoji`) or a `{ "verb", "emoji" }` pair to give that one word its
+own — which is exactly how `--emoji-match` knows a song from a fitba player:
 
 ```json
-{ "mode": "replace", "emoji": "🦄", "verbs": ["Swithering", "Havering", "Dwammin'"] }
+{
+  "mode": "replace",
+  "emoji": "🦄",
+  "verbs": ["Swithering", "Havering", { "verb": "McGinning", "emoji": "⚽" }]
+}
 ```
 
 Drop a new one in `themes/`, and it appears in `spinner-theme list`
-automatically. Want it folded into the everything-theme? Rebuild it:
+automatically. Want it folded into the everything-theme? Rebuild it — this tags
+each word with its source theme's emoji so `--emoji-match` keeps working (and note
+it lists the source themes, not `themes/*.json`, so the-full-haggis isn't folded
+into itself):
 
 ```sh
-jq -s '{mode:"replace", emoji:"🦄", verbs:(map(.verbs)|add|unique)}' \
-  themes/*.json > themes/the-full-haggis.json
+# Source order matters: when a word lives in two themes, the FIRST file wins its
+# emoji (e.g. Carnegie-ing is in both famous-scots and fife).
+jq -s '{mode:"replace", emoji:"🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+        verbs:(map(.emoji as $d | .verbs[]
+          | if type=="object" then {verb:.verb, emoji:(.emoji // $d)}
+            else {verb:., emoji:$d} end) | unique_by(.verb))}' \
+  themes/famous-scots.json themes/fife.json themes/scottish-culture.json \
+  themes/scottish-football.json themes/scottish-words.json \
+  > themes/the-full-haggis.json
 ```
 
 **Stuck for ideas?** Scottish is just *my* version — the format goes anywhere,
