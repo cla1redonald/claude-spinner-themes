@@ -1,10 +1,10 @@
 # claude-spinner-themes 🦄🏴󠁧󠁢󠁳󠁣󠁴󠁿
 
-**Teach Claude Code to think like a Scot.**
+> **Meet Scottish Claude** — Claude Code, but with a bit of home in it.
 
 You know the wee word that flickers while Claude Code is working — *Thinking…*,
-*Pondering…*, *Percolating…*? This swaps it for something with a bit more
-character:
+*Pondering…*, *Percolating…*? Scottish Claude swaps it for something with a bit
+more character:
 
 ```
 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Swithering…        ⚽ Bicycle-kicking…        🦕 Nessie-hunting…
@@ -29,7 +29,7 @@ only ever changes that one setting.
 
 | Theme | A taste of it |
 |---|---|
-| 🦄 **scots-words** | Real dictionary Scots for thinking and faffing — *Swithering, Jalousin', Dwammin', Dreich, Howkin'* |
+| 🦄 **scots-words** | Real dictionary Scottish words for thinking and faffing — *Swithering, Jalousin', Dwammin', Dreich, Howkin'* |
 | 🏰 **fife** | Fife & Dunfermline patter and heritage — *Slaisterin', Bunkerin', Carnegie-ing, Up-the-Pars* |
 | ⚽ **scottish-football** | Legends and the modern lot — *Gemmilling, McCoisting, Fergie-ing, McTominaying, Ya beauty* |
 | 🎶 **scottish-culture** | Songs, films, food, sayings, landmarks — *Walkin'-500-Miles, Deep-frying, Painting-the-Forth-Bridge* |
@@ -101,7 +101,7 @@ throwaway file first? `CLAUDE_SETTINGS=/tmp/test.json spinner-theme set fife`.
 
 ## These aren't made up
 
-The Scots and Fife words are the real thing. Every mainstream Scots word was
+The Scottish and Fife words are the real thing. Every mainstream Scottish word was
 checked against the **[Dictionaries of the Scots Language](https://dsl.ac.uk)**
 (the scholarly national dictionary) or Wiktionary, and the Fife ones come from
 local dialect glossaries. The football and culture references got fact-checked
