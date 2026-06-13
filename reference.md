@@ -6,7 +6,7 @@ one means and where it's verified. Scots words were checked against the
 terms come from local dialect glossaries; football/culture references were
 fact-checked against news and reference sources.
 
-## scots-words — verified against DSL / Wiktionary
+## scottish-words — verified against DSL / Wiktionary
 
 | Spinner word | Meaning | Source |
 |---|---|---|
