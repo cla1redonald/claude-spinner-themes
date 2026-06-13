@@ -7,14 +7,15 @@ You know the wee word that flickers while Claude Code is working — *Thinking�
 more character:
 
 ```
-🏴󠁧󠁢󠁳󠁣󠁴󠁿 Swithering…        ⚽ Bicycle-kicking…        🦕 Nessie-hunting…
-🦄 Jalousin…           🏰 Up-the-Pars…           🥃 Drammin…
-🎶 Painting-the-Forth-Bridge…              🦄 Havering…
+🦄 Swithering…        ⚽ Bicycle-kicking…        🏰 Stirling-Castling…
+🎬 Connery-ing…       🥃 Drammin'…             🍽️ Deep-frying…
+🎶 Walkin'-500-Miles…              🏴󠁧󠁢󠁳󠁣󠁴󠁿 Haud-Yer-Wheesht…
 ```
 
-Six themes, a one-line switch between them, and a wee unicorn (or a rotating
-parade of Saltires, castles and Nessie) on every word. It's daft — and weirdly
-lovely to watch your editor have a *swither* instead of a think.
+Six themes, a one-line switch between them, and the right wee emoji matched to
+every word — a fitba player gets a ⚽, a song gets a 🎶 (or a rotating parade of
+Saltires, castles and Nessie, if you'd rather). It's daft — and weirdly lovely to
+watch your editor have a *swither* instead of a think.
 
 <p align="center">
   <img src="assets/demo-birlin.gif" alt="Claude Code's spinner reading 'Birlin'…' with a Saltire" width="620">

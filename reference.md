@@ -131,5 +131,4 @@ Sean) · **Tennanting** (David Tennant) · **McGregoring** (Ewan) · **Tuckering
 Cinnamon) · **Biffy-ing** (Biffy Clyro) · **Dignity-ing** (Deacon Blue) ·
 **Calvin-Harrising** · **Rab-C-ing / Nesbitting** (Rab C. Nesbitt) ·
 **Still-Gaming / Jack-an'-Victoring** (Still Game) · **Gonnae-No'-Dae-That**
-(Chewin' the Fat) · **Limmying** · **Taggart-ing** ("there's been a murder") ·
-**Carnegie-ing** (Andrew Carnegie).
+(Chewin' the Fat) · **Limmying** · **Taggart-ing** ("there's been a murder").
