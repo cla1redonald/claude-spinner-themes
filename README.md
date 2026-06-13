@@ -1,6 +1,6 @@
 # claude-spinner-themes 🦄🏴󠁧󠁢󠁳󠁣󠁴󠁿
 
-**Teach Claude Code to think in Scots.**
+**Teach Claude Code to think like a Scot.**
 
 You know the wee word that flickers while Claude Code is working — *Thinking…*,
 *Pondering…*, *Percolating…*? This swaps it for something with a bit more
