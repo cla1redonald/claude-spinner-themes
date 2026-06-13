@@ -16,7 +16,11 @@ Six themes, a one-line switch between them, and a wee unicorn (or a rotating
 parade of Saltires, castles and Nessie) on every word. It's daft — and weirdly
 lovely to watch your editor have a *swither* instead of a think.
 
-*(pop a screen recording / GIF in here)*
+<p align="center">
+  <img src="assets/demo-birlin.gif" alt="Claude Code's spinner reading 'Birlin'…' with a Saltire" width="620">
+</p>
+
+<p align="center"><em>Aye, that says <strong>Birlin'</strong> — Scots for "spinning". The spinner, having a wee birl. We couldn't not.</em></p>
 
 ## How it works
 
@@ -85,6 +89,12 @@ The words are just text, so you can dress them up with emoji:
   is 🏴󠁧󠁢󠁳󠁣󠁴󠁿 🦄 🦕 🏰 ⚽ 🥃 🎶 (flag, unicorn, Nessie, castle, football, whisky,
   bagpipes). Want your own? `spinner-theme set fife --emoji-rotate 🏴󠁧󠁢󠁳󠁣󠁴󠁿 🦄 🦕`.
 
+<p align="center">
+  <img src="assets/demo-nessie-hunting.gif" alt="Claude Code's spinner reading 'Nessie-hunting…' with a wee dinosaur" width="620">
+</p>
+
+<p align="center"><em>🦕 <strong>Nessie-hunting…</strong> — the rotating emoji landing on the closest thing Unicode has to a monster of the loch.</em></p>
+
 Two honest notes: there's **no thistle emoji** (Unicode has let Scotland down
 there), and the **Scotland flag** 🏴󠁧󠁢󠁳󠁣󠁴󠁿 doesn't render in every terminal —
 some show a plain black flag or empty boxes. Check yours with
@@ -132,6 +142,12 @@ Fancy seeing how much of your session you've used, right in Claude Code's status
 line? It's there for the taking — `rate_limits.five_hour.used_percentage` (the
 rolling session limit) and `rate_limits.seven_day.used_percentage`. A status line
 like `~/code  Fable  ctx:34%  session:61%  7d:12%` is a couple of `jq` lines away.
+
+<p align="center">
+  <img src="assets/demo-haste-ye-back.gif" alt="Claude Code's spinner reading 'Haste-Ye-Back…'" width="620">
+</p>
+
+<p align="center"><em>🍲 <strong>Haste-Ye-Back…</strong> — "come back soon." A fine thing for your editor to say while it works.</em></p>
 
 ## Licence
 
